@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { GlobalProvider } from './context/GlobalState';
 import Header from './components/Header';
@@ -11,7 +11,8 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Watchlist />} />
+        <Route path="/" element={<Navigate to="/add" replace />} />
+        <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/watched" element={<Watched />} />
         <Route path="/add" element={<Add />} />
       </Routes>

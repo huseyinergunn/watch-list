@@ -28,7 +28,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-5 py-2.5 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
+        <Link to="/add" className="flex items-center gap-2.5 group">
           <LogoIcon size={44} className="drop-shadow-lg transition-transform duration-300 group-hover:scale-105" />
           <span
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: '0.02em' }}
@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Nav */}
         <nav className="flex items-center gap-1.5">
-          {navLink('/', 'İzlenecekler', null)}
+          {navLink('/watchlist', 'İzlenecekler', null)}
           {navLink('/watched', 'İzlenenler', <Eye size={13} />)}
 
           <Link
