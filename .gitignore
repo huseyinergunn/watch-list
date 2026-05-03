@@ -1,0 +1,21 @@
+# Bağımlılıklar
+node_modules/
+
+# Derleme çıktısı
+dist/
+
+# Ortam değişkenleri (API anahtarları GitHub'a gitmemeli)
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+*.local
